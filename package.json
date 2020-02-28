@@ -6,10 +6,14 @@
   "scripts": {
     "build": "tsc",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "test": "tsc -p tsconfig.test.json && mocha build/test/**/*"
+    "test": "tsc -p tsconfig.test.json && mocha build/test/**/*",
+    "release": "semantic-release"
   },
   "author": "Niels Chr. Friis Jakobsen <ncfjakobsen@me.com>",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/Niljak/typescript-json-coding.git"
+  },
   "devDependencies": {
     "@types/chai": "4.2.9",
     "@types/mocha": "7.0.1",
@@ -21,6 +25,7 @@
     "eslint-plugin-prettier": "3.1.2",
     "mocha": "7.0.1",
     "prettier": "1.19.1",
+    "semantic-release": "17.0.4",
     "typescript": "3.8.2"
   }
 }

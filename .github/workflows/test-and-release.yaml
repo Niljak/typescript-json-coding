@@ -1,0 +1,26 @@
+name: Test and Release
+on:
+  push:
+    branches:
+      - master
+jobs:
+  release:
+    name: 'Test and Release'
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install yarn
+        run: npm install -g yarn
+      - name: Install dependencies
+        run: yarn install
+      - name: Run lint
+        run: yarn lint
+      - name: Run tests
+        run: yarn test
+      - name: Release
+        run: yarn release -d
