@@ -14,7 +14,14 @@
   "repository": {
     "url": "https://github.com/Niljak/typescript-json-coding.git"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "devDependencies": {
+    "@commitlint/cli": "8.3.5",
+    "@commitlint/config-angular": "8.3.4",
     "@types/chai": "4.2.9",
     "@types/mocha": "7.0.1",
     "@typescript-eslint/eslint-plugin": "2.20.0",
@@ -23,6 +30,7 @@
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.10.0",
     "eslint-plugin-prettier": "3.1.2",
+    "husky": "4.2.3",
     "mocha": "7.0.1",
     "prettier": "1.19.1",
     "semantic-release": "17.0.4",
